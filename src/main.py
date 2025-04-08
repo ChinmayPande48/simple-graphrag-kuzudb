@@ -23,6 +23,7 @@ ingest_rel_data()
 
 #invoke QAChain
 
-query = "Who all were cast in the Movie 12 Angry Men?"
+
+query = input("Enter a movie question:\n")
 result=graphRagQA(query)
 print(result)
