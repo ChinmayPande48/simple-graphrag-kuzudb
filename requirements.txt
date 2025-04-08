@@ -1,0 +1,9 @@
+uv
+python-dotenv
+kagglehub
+pandas
+numpy
+langchain-kuzu
+langchain-community
+langchain-google-genai
+uv
