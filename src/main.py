@@ -14,8 +14,8 @@ df_directed_by,df_starred_in,df_second_lead_in,df_supporting_actor_in,df_second_
 
 #create db
 
-#drop_rel()
-#drop_node()
+drop_rel()
+drop_node()
 create_node()
 ingest_node_data()
 create_rel()

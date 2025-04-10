@@ -8,12 +8,9 @@ from os.path import join, dirname
 from dotenv import load_dotenv
 from graph_db import db
 
-#dotenv_path = join(dirname(__file__), 't.env')
-#load_dotenv(dotenv_path)
+load_dotenv()
 
-GOOGLE_API_KEY = 'AIzaSyANtqL1qQCiLKHQUIt1585N74u3bB2rHvM'
-
-#GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
+GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
 
 graph = KuzuGraph(db, allow_dangerous_requests=True)
 schema=graph.get_schema
