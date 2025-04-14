@@ -39,11 +39,11 @@ cypher_prompt_template_kuzuQAChain = PromptTemplate(input_variables=[schema,"que
     For example:
             Question: Which movies did Aaron Sorkin direct?
             Output:
-              MATCH (d:Director)<-[r1:DIRECTED_BY]-(m:Movie) WHERE lower(d.Director) = lower('Aaron Sorkin') RETURN m.Series_Title
+              MATCH (d:Director)<-[r1:DIRECTED_BY]-(m:Movie) WHERE lower(d.Director) = lower('Aaron Sorkin') RETURN m.Series_Title AS movie_directed
 
             Question: Who all were cast in the movie dunkirk?
             Output:
-              MATCH (m:Movie {{Series_Title: lower('Dunkirk)}})<-[:STARRED_IN]-(s1:Star1) MATCH (m:Movie {{Series_Title: lower('Dunkirk')}})<-[:SECOND_LEAD_IN]-(s2:Star2) MATCH (m:Movie {{Series_Title: lower('Dunkirk')}})<-[:SUPPORTING_ACTOR_IN]-(s3:Star3) MATCH (m:Movie {{Series_Title: lower('Dunkirk')}})<-[:SECOND_SUPPORTING_ACTOR_IN]-(s4:Star4) RETURN s1.Star1 AS Star1, s2.Star2 AS Star2, s3.Star3 AS Star3, s4.Star4 AS Star4
+              MATCH (m:Movie {{Series_Title: lower('Dunkirk)}})<-[:STARRED_IN]-(s1:Star1) MATCH (m:Movie {{Series_Title: lower('Dunkirk')}})<-[:SECOND_LEAD_IN]-(s2:Star2) MATCH (m:Movie {{Series_Title: lower('Dunkirk')}})<-[:SUPPORTING_ACTOR_IN]-(s3:Star3) MATCH (m:Movie {{Series_Title: lower('Dunkirk')}})<-[:SECOND_SUPPORTING_ACTOR_IN]-(s4:Star4) RETURN s1.Star1 AS Star, s2.Star2 AS Second_lead, s3.Star3 AS Supporting_actor, s4.Star4 AS Second_supporting_actor
             
     """
 )
